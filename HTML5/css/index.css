@@ -56,7 +56,6 @@ body {
 /* cascading에 의해 main의 blue는 안 보임 */
 .group {
   background: skyblue;
-  height: 10vh;
 }
 
 .group1 {
