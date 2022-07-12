@@ -33,29 +33,38 @@ body {
 /* 헤더 */
 .header {
   background: yellow;
-  height: 10vh;
 }
 
 /* 비주얼 */
 .visual {
   background: pink;
-  height: 10vh;
 }
 
 /* 메인 콘텐츠 */
 .main {
-  height: 40vh;
+  display: flow-root;
   background: blue;
   padding: 30px 15px;
+  /* overflow: hidden; */
+  /* padding: 30px 15px;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
+  justify-content: space-around; */
+}
+
+.main::after {
+  /* main의 마지막에 가상 요소 추가하는 것 */
+  /* content: '';
+  display: block;
+  clear: both; */
 }
 
 /* 그룹 */
 /* cascading에 의해 main의 blue는 안 보임 */
 .group {
+  float: left;
   background: skyblue;
+  margin: 0 15px;
 }
 
 .group1 {
@@ -73,7 +82,7 @@ body {
 /* 슬로건 */
 .slogan {
   background: lime;
-  height: 10vh;
+  clear: both;
 }
 
 /* 푸터 */
@@ -82,5 +91,4 @@ body {
 }
 .footer-inner {
   background: coral;
-  height: 10vh;
 }
