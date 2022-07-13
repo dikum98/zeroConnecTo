@@ -1,6 +1,23 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.4/dist/web/static/pretendard.css');
+/* 웹 폰트 자원을 먼저 선언 */
+@import url('./fonts.css');
 @import url('./normalize.css');
 @import url('./reset.css');
+@import url('./fontello.css');
+
+/* 숨김 콘텐츠 */
+.sr-only {
+  background: red;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  /* 보여질 부분을 정의함. 클립 속성은 position absolute 속성값을 가진 요소에만 적용됨 */
+  clip: rect(0, 0, 0, 0);
+  /* 클리핑 범위 안은 보여지고, 바깥은 숨겨짐 */
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
 
 /* 기본 스타일 */
 *,
@@ -17,6 +34,10 @@ a {
 }
 
 /* 본문 스타일 */
+html {
+  font-size: 10px;
+}
+
 body {
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
     'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
@@ -25,6 +46,7 @@ body {
   font-weight: 400;
   background: #ccc;
   color: #181818;
+  font-size: 1.4rem;
 }
 
 /* 레이아웃 */
@@ -39,16 +61,18 @@ body {
 
 /* 헤더 */
 .header {
+  background: #fff;
   position: relative;
-  padding: 8px 30px 50px;
-  min-height: 20vh;
+  padding: 8px 30px;
+  border-radius: 0 0 15px 15px;
 }
 
 /* 로고 */
 .logo {
   position: absolute;
-  top: 45px;
+  top: 50px;
   left: 65px;
+  /* z-index: 1000; */
 }
 
 /* 멤버링크 */
@@ -65,6 +89,99 @@ body {
 .member a {
   display: inline-block;
   padding: 8px;
+}
+
+/* 메인 메뉴 */
+.navigation {
+  padding-bottom: 30px;
+}
+.menu {
+  background: #d16527
+    linear-gradient(
+      to bottom,
+      #edad2d 0%,
+      #d16527 45%,
+      #d16527 60%,
+      #edad2d 100%
+    );
+  padding-left: 232px;
+  display: flow-root;
+  height: 47px;
+  border-top: 2px solid #000;
+  border-radius: 0 0 5px 5px;
+}
+
+.menu-item {
+  position: relative;
+  float: left;
+}
+
+.menu-button {
+  /* menu에 border 2px을 줬기 때문에 */
+  line-height: 45px;
+  border: 0;
+  padding: 0 21px;
+  background: transparent;
+  border-left: 2px solid #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  /* 그림자를 2번 만들어서 하나는 1px, 하나는 -1px */
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+}
+
+.menu-item.is-active .menu-button {
+  color: #ff0;
+}
+
+.menu-item.is-active .menu-button::after {
+  content: '';
+  display: block;
+  background: #000;
+  height: 2px;
+}
+
+.menu-item:nth-child(-n + 3) .sub-menu {
+  left: 0;
+}
+
+.menu-item:nth-child(n + 4) .sub-menu {
+  right: 0;
+}
+
+.sub-menu {
+  position: absolute;
+  display: none;
+  top: 47px;
+  white-space: nowrap;
+}
+
+.sub-menu li {
+  display: inline-block;
+}
+
+.sub-menu a {
+  display: inline-block;
+  padding: 8px 10px;
+  margin-right: 10px;
+}
+
+.sub-menu a::before {
+  content: '\f192';
+  font-family: 'fontello';
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+}
+
+.sub-menu a:hover::before,
+.sub-menu a:focus::before {
+  content: '\e800';
+}
+
+.menu-item.is-active .sub-menu {
+  display: block;
 }
 
 /* 비주얼 */
