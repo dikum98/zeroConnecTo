@@ -9,6 +9,13 @@
   box-sizing: border-box;
 }
 
+/* 링크 스타일 */
+a {
+  /* 상속 받은 값을 우선한다 */
+  color: inherit;
+  text-decoration: none;
+}
+
 /* 본문 스타일 */
 body {
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
@@ -16,7 +23,7 @@ body {
     'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
     sans-serif;
   font-weight: 400;
-  background: #fff;
+  background: #ccc;
   color: #181818;
 }
 
@@ -32,7 +39,32 @@ body {
 
 /* 헤더 */
 .header {
-  background: yellow;
+  position: relative;
+  padding: 8px 30px 50px;
+  min-height: 20vh;
+}
+
+/* 로고 */
+.logo {
+  position: absolute;
+  top: 45px;
+  left: 65px;
+}
+
+/* 멤버링크 */
+.member {
+  text-align: right;
+  transform: translateX(8px);
+}
+
+.member li {
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.member a {
+  display: inline-block;
+  padding: 8px;
 }
 
 /* 비주얼 */
