@@ -185,8 +185,75 @@ body {
 }
 
 /* 비주얼 */
+@keyframes moveEffect {
+  0% {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0);
+    transform: translate(0, 0);
+  }
+  100% {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 1);
+    transform: translate(400px, 75px);
+  }
+}
+
+@keyframes fadeEffect {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .visual {
   background: pink;
+  height: 120px;
+  position: relative;
+}
+
+.visual::before,
+.visual::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  /* animation-name: fadeEffect;
+  animation-duration: 2000ms; */
+  /* 애니메이션 무한 반복 */
+  /* animation-iteration-count: infinite;
+  animation-direction: alternate; */
+  animation: fadeEffect 2000ms infinite alternate;
+}
+
+.visual::before {
+  background-image: url(./images/ani_flower_01.png),
+    url(./images/ani_flower_02.png);
+  background-position: 0 -10px, 670px 0;
+}
+
+.visual::after {
+  background-image: url(./images/ani_flower_03.png),
+    url(./images/ani_flower_04.png);
+  background-position: 300px 10px, 800px 10px;
+  /* 교차로 동작 */
+  animation-delay: 1000ms;
+}
+
+.visual-text {
+  background: lime;
+  animation-name: moveEffect;
+  animation-duration: 2000ms;
+  /* 끝난 상태로 멈추게 하기 */
+  animation-fill-mode: forwards;
+  /* 수평 스크롤이 나타나지 않도록 */
+  display: inline-block;
+  /* 조지아 글꼴이 1순위, 세리프가 마지막 순위 */
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /* 메인 콘텐츠 */
