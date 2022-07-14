@@ -399,9 +399,66 @@ body {
   padding-left: 45px;
 }
 
-.validation-list a:hover, .validation-list a:focus {
+.validation-list a:hover,
+.validation-list a:focus {
   color: #f00;
-  background-size: 14px 14px, 100%
+  background-size: 14px 14px, 100%;
+}
+
+/* 웹 관련 용어 */
+.term {
+  margin-top: 20px;
+  background: linear-gradient(to bottom, #666, #999);
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.term-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.term-list {
+  margin-top: 15px;
+}
+
+.term-list div {
+  display: flow-root;
+  margin-top: 10px;
+  background: #fff;
+}
+
+.term-list-subject {
+  width: 145px;
+  color: #2470a9;
+}
+
+.term-list-thumbnail {
+  position: relative;
+  top: 2px;
+}
+
+.term-list-thumbnail img {
+  vertical-align: top;
+}
+
+.term-list-breif {
+  width: 145px;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+.even .term-list-subject,
+.even .term-list-breif,
+.odd .term-list-thumbnail {
+  float: left;
+}
+
+.odd .term-list-subject,
+.odd .term-list-breif,
+.even .term-list-thumbnail {
+  float: right;
 }
 
 /* 슬로건 */
