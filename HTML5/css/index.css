@@ -527,6 +527,7 @@ body {
 
 .board-tab {
   position: absolute;
+  top: 0;
   border: 1px solid #aaa;
   border-radius: 5px 5px 0 0;
   background: #ccc;
