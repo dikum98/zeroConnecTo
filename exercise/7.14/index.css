@@ -1,9 +1,9 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.4/dist/web/static/pretendard.css');
 /* 웹 폰트 자원을 먼저 선언 */
-@import url('./fonts.css');
-@import url('./normalize.css');
-@import url('./reset.css');
-@import url('./fontello.css');
+@import url(/HTML5/css/fonts.css);
+@import url(/HTML5/css/normalize.css);
+@import url(/HTML5/css/reset.css);
+@import url(/HTML5/css/fontello.css);
 
 /* 숨김 콘텐츠 */
 .sr-only,
@@ -231,14 +231,14 @@ body {
 }
 
 .visual::before {
-  background-image: url(./images/ani_flower_01.png),
-    url(./images/ani_flower_02.png);
+  background-image: url(/HTML5/css/images/ani_flower_01.png),
+    url(/HTML5/css/images/ani_flower_02.png);
   background-position: 0 -10px, 670px 0;
 }
 
 .visual::after {
-  background-image: url(./images/ani_flower_03.png),
-    url(./images/ani_flower_04.png);
+  background-image: url(/HTML5/css/images/ani_flower_03.png),
+    url(/HTML5/css/images/ani_flower_04.png);
   background-position: 300px 10px, 800px 10px;
   /* 교차로 동작 */
   animation-delay: 1000ms;
@@ -391,7 +391,8 @@ body {
 }
 
 .validation-list a {
-  background: url('./images/validation_icon.png') no-repeat 20px 50% /16px 16px,
+  background: url('/HTML5/css/images/validation_icon.png') no-repeat 20px 50% /16px
+      16px,
     #aaa linear-gradient(to bottom, #ccc, #aaa) repeat;
   display: block;
   padding: 10px;
@@ -459,58 +460,6 @@ body {
 .odd .term-list-breif,
 .even .term-list-thumbnail {
   float: right;
-}
-
-/* 검색 폼 */
-.search-form {
-  background: #ccc linear-gradient(to bottom, #ccc, #eee);
-  border: 1px solid #aaa;
-  border-radius: 10px 10px 0 0;
-  padding: 15px 25px 10px;
-
-  /* 이 방법도 쓰지만 */
-  /* border-bottom: 0; */
-
-  /* 이번에는 이렇게. 효율적이라서 보다는 이런 방법도 있다는걸 보여줌 */
-  border-bottom-color: #fff;
-}
-
-.search-form fieldset {
-  display: flex;
-
-  /* 기본값이지만 그래도 설정 */
-  flex-flow: row nowrap;
-  align-items: center;
-}
-
-.search-form input {
-  border: 1px solid #aaa;
-  height: 24px;
-  border-radius: 4px 4px 0 0;
-
-  /* 반 글자만큼 왼쪽으로 딱 붙ㅇ지 않도록 0.5em 준다 */
-  padding: 2px 2px 2px 0.5em;
-
-  /* 자료료검색과 입력을 제외한 인풋창만 확대 */
-  /* flex-grow: 1; */
-
-  /* 100% 주면 부모 컨테이너가 커지거나 작아졌을 때*/
-  width: 100%;
-  margin: 0 10px;
-}
-
-.search-form label,
-.search-button {
-  white-space: nowrap;
-}
-
-.search-button {
-  background: #000;
-  color: #fff;
-  padding: 2px 10px;
-  height: 24px;
-  border-radius: 4px;
-  border: 0;
 }
 
 /* 슬로건 */

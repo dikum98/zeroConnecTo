@@ -1,13 +1,12 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.4/dist/web/static/pretendard.css');
 /* 웹 폰트 자원을 먼저 선언 */
-@import url('./fonts.css');
-@import url('./normalize.css');
-@import url('./reset.css');
-@import url('./fontello.css');
+@import url(/HTML5/css/fonts.css);
+@import url(/HTML5/css/normalize.css);
+@import url(/HTML5/css/reset.css);
+@import url(/HTML5/css/fontello.css);
 
 /* 숨김 콘텐츠 */
-.sr-only,
-legend {
+.sr-only {
   background: red;
   position: absolute;
   width: 1px;
@@ -209,6 +208,7 @@ body {
 }
 
 .visual {
+  background: pink;
   height: 120px;
   position: relative;
 }
@@ -231,20 +231,21 @@ body {
 }
 
 .visual::before {
-  background-image: url(./images/ani_flower_01.png),
-    url(./images/ani_flower_02.png);
+  background-image: url(/HTML5/css/images/ani_flower_01.png),
+    url(/HTML5/css/images/ani_flower_02.png);
   background-position: 0 -10px, 670px 0;
 }
 
 .visual::after {
-  background-image: url(./images/ani_flower_03.png),
-    url(./images/ani_flower_04.png);
+  background-image: url(/HTML5/css/images/ani_flower_03.png),
+    url(/HTML5/css/images/ani_flower_04.png);
   background-position: 300px 10px, 800px 10px;
   /* 교차로 동작 */
   animation-delay: 1000ms;
 }
 
 .visual-text {
+  background: lime;
   animation-name: moveEffect;
   animation-duration: 2000ms;
   /* 끝난 상태로 멈추게 하기 */
@@ -258,10 +259,8 @@ body {
 /* 메인 콘텐츠 */
 .main {
   display: flow-root;
-  background: #fff;
+  background: blue;
   padding: 30px 15px;
-  border-radius: 15px 15px 0 0;
-  min-height: 400px;
   /* overflow: hidden; */
   /* padding: 30px 15px;
   display: flex;
@@ -280,6 +279,7 @@ body {
 /* cascading에 의해 main의 blue는 안 보임 */
 .group {
   float: left;
+  background: skyblue;
   margin: 0 15px;
 }
 
@@ -293,224 +293,6 @@ body {
 
 .group3 {
   width: 190px;
-}
-
-/* 로그인 */
-.login {
-  background: #ed552f radial-gradient(circle at right top, #e8852e, #ed552f);
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: 5px 5px 0 0 #aaa;
-}
-
-.login-title {
-  color: #ff0;
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-indent: 10px;
-}
-
-.login-form {
-  margin-top: 10px;
-  background: #fff;
-  padding: 10px 10px 0 10px;
-  border-radius: 5px 5px 0 0;
-}
-
-.login-form fieldset {
-  position: relative;
-  border-bottom: 1px solid #aaa;
-  padding-bottom: 10px;
-}
-
-.user-email {
-  margin-bottom: 5px;
-}
-
-.login-form label {
-  width: 56px;
-  display: inline-block;
-}
-
-.login-form input {
-  width: 90px;
-  height: 24px;
-  border: 1px solid #aaa;
-  border-radius: 4px;
-  padding: 2px 2px 2px 0.5em;
-}
-
-.login-button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50px;
-  height: 53px;
-  padding: 0;
-  font-size: 1.3rem;
-  color: #fff;
-  background: #ed552f;
-  border: 0;
-  border-radius: 4px;
-}
-
-.sign {
-  background: #fff;
-  padding: 4px 10px;
-  padding: 0 10px 10px 10px;
-  border-radius: 0 0 5px 5px;
-  display: flow-root;
-}
-
-.sign li:first-child {
-  float: left;
-}
-
-.sign li:last-child {
-  float: right;
-}
-
-.sign a {
-  display: block;
-  padding: 6px 0;
-  font-size: 1.3rem;
-  /* letter-spacing: -1px; */
-}
-
-.sign .icon-right-open::before {
-  color: #ed552f;
-}
-
-/* 유효성 검사 배너 링크 그룹 */
-.validation-list {
-  margin-top: 25px;
-}
-
-.validation-list li {
-  margin-top: 10px;
-}
-
-.validation-list a {
-  background: url('./images/validation_icon.png') no-repeat 20px 50% /16px 16px,
-    #aaa linear-gradient(to bottom, #ccc, #aaa) repeat;
-  display: block;
-  padding: 10px;
-  border-radius: 50px;
-  padding-left: 45px;
-}
-
-.validation-list a:hover,
-.validation-list a:focus {
-  color: #f00;
-  background-size: 14px 14px, 100%;
-}
-
-/* 웹 관련 용어 */
-.term {
-  margin-top: 20px;
-  background: linear-gradient(to bottom, #666, #999);
-  border: 1px solid #000;
-  border-radius: 5px;
-  padding: 15px;
-}
-
-.term-title {
-  font-weight: 700;
-  font-size: 1.5rem;
-}
-
-.term-list {
-  margin-top: 15px;
-}
-
-.term-list div {
-  display: flow-root;
-  margin-top: 10px;
-  background: #fff;
-}
-
-.term-list-subject {
-  width: 145px;
-  color: #2470a9;
-}
-
-.term-list-thumbnail {
-  position: relative;
-  top: 2px;
-}
-
-.term-list-thumbnail img {
-  vertical-align: top;
-}
-
-.term-list-breif {
-  width: 145px;
-  margin-top: 5px;
-  line-height: 1.5;
-}
-
-.even .term-list-subject,
-.even .term-list-breif,
-.odd .term-list-thumbnail {
-  float: left;
-}
-
-.odd .term-list-subject,
-.odd .term-list-breif,
-.even .term-list-thumbnail {
-  float: right;
-}
-
-/* 검색 폼 */
-.search-form {
-  background: #ccc linear-gradient(to bottom, #ccc, #eee);
-  border: 1px solid #aaa;
-  border-radius: 10px 10px 0 0;
-  padding: 15px 25px 10px;
-
-  /* 이 방법도 쓰지만 */
-  /* border-bottom: 0; */
-
-  /* 이번에는 이렇게. 효율적이라서 보다는 이런 방법도 있다는걸 보여줌 */
-  border-bottom-color: #fff;
-}
-
-.search-form fieldset {
-  display: flex;
-
-  /* 기본값이지만 그래도 설정 */
-  flex-flow: row nowrap;
-  align-items: center;
-}
-
-.search-form input {
-  border: 1px solid #aaa;
-  height: 24px;
-  border-radius: 4px 4px 0 0;
-
-  /* 반 글자만큼 왼쪽으로 딱 붙ㅇ지 않도록 0.5em 준다 */
-  padding: 2px 2px 2px 0.5em;
-
-  /* 자료료검색과 입력을 제외한 인풋창만 확대 */
-  /* flex-grow: 1; */
-
-  /* 100% 주면 부모 컨테이너가 커지거나 작아졌을 때*/
-  width: 100%;
-  margin: 0 10px;
-}
-
-.search-form label,
-.search-button {
-  white-space: nowrap;
-}
-
-.search-button {
-  background: #000;
-  color: #fff;
-  padding: 2px 10px;
-  height: 24px;
-  border-radius: 4px;
-  border: 0;
 }
 
 /* 슬로건 */

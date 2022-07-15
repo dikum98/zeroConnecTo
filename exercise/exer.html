@@ -2,13 +2,13 @@
 <html lang="ko-KR">
   <head>
     <meta charset="UTF-8" />
-    <title>웹카페 - HTML5</title>
-    <link rel="stylesheet" href="./css/index.css" />
+    <title>연습</title>
+    <link rel="stylesheet" href="exer.css" />
   </head>
   <body>
     <header class="header">
       <h1 class="logo">
-        <a href="/"><img src="./assets/logo.png" alt="Web Cafe" /></a>
+        <a href="/"><img src="/HTML5/assets/logo.png" alt="Web Cafe" /></a>
       </h1>
       <ul class="member">
         <li>
@@ -151,10 +151,10 @@
             class="login-form"
           >
             <fieldset>
-              <legend>회원 로그인 폼</legend>
+              <legend>회원 로그인 폼</legend>
               <div class="user-email">
-                <label for="userEmail">아이디</label
-                ><input
+                <label for="userEmail">아이디</label>
+                <input
                   type="email"
                   id="userEmail"
                   required="required"
@@ -162,8 +162,8 @@
                 />
               </div>
               <div class="user-pwd">
-                <label for="userPwd">비밀번호</label
-                ><input
+                <label for="userEmail">비밀번호</label>
+                <input
                   type="password"
                   id="userPwd"
                   required="required"
@@ -174,15 +174,13 @@
             </fieldset>
           </form>
           <ul class="sign">
-            <li>
-              <a href="/" class="icon-right-open">회원가입</a>
-            </li>
+            <li><a href="/" class="icon-right-open">회원가입</a></li>
             <li>
               <a href="/" class="icon-right-open">아이디/비밀번호 찾기</a>
             </li>
           </ul>
         </section>
-        <!-- 유효성 검사 배너 링크 그룹-->
+        <!-- 유효성 검사 배너 링크 그룹 -->
         <h2 class="sr-only">유효성 검사 배너</h2>
         <ul class="validation-list">
           <li>
@@ -203,55 +201,8 @@
           </li>
         </ul>
         <!-- 웹 관련 용어 -->
-        <section class="term">
-          <h2 class="term-title">웹 관련 용어</h2>
-          <dl class="term-list">
-            <div class="odd">
-              <dt class="term-list-subject">웹 표준 이란?</dt>
-              <dd class="term-list-thumbnail">
-                <img src="./assets/web_standards.gif" alt="W3C 로고" />
-              </dd>
-              <dd class="term-list-breif">
-                W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준
-                규격은...
-              </dd>
-            </div>
-            <div class="even">
-              <dt class="term-list-subject">웹 표준 이란?</dt>
-              <dd class="term-list-thumbnail">
-                <img src="./assets/web_standards.gif" alt="W3C 로고" />
-              </dd>
-              <dd class="term-list-breif">
-                W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준
-                규격은...
-              </dd>
-            </div>
-          </dl>
-        </section>
       </div>
-      <div class="group group2">
-        <h2 class="sr-only">검색</h2>
-        <form
-          method="POST"
-          action="https://formspree.io/seulbinim@gmail.com"
-          class="search-form"
-        >
-          <fieldset>
-            <legend>검색 폼</legend>
-            <label for="search"
-              ><i class="icon-search" aria-hidden="true"></i>자료검색</label
-            >
-            <input
-              type="search"
-              id="search"
-              name="search"
-              required="required"
-              placeholder="검색어를 입력하세요."
-            />
-            <button type="submit" class="search-button">검색</button>
-          </fieldset>
-        </form>
-      </div>
+      <div class="group group2">그룹2</div>
       <div class="group group3">그룹3</div>
     </main>
     <article class="slogan">슬로건</article>
