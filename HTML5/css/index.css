@@ -497,6 +497,9 @@ body {
   /* 100% 주면 부모 컨테이너가 커지거나 작아졌을 때*/
   width: 100%;
   margin: 0 10px;
+
+  /* 웹킷 쓰는 모바일에서 인풋창 둥글어지는 버그 교정을 위함 */
+  -webkit-appearance: none;
 }
 
 .search-form label,
