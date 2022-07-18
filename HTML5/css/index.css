@@ -519,7 +519,7 @@ body {
 /* 공지사항 및 자료실 */
 .board {
   margin-top: 20px;
-  background: yellow;
+  /* background: yellow; */
   position: relative;
   padding-top: 45px;
   min-height: 214px;
@@ -572,12 +572,15 @@ body {
 .board-more {
   display: none;
   position: absolute;
+
+  /* ??? */
   top: -8px;
   right: -8px;
   padding: 8px;
 }
 
-.board-more::before {
+/* 공지사항, 자료실, 새소식, 인기사이트 더보기 링크 웹폰트 글자 색상 일괄 적용 */
+.more::before {
   color: hsla(110, 50%, 30%, 1);
 }
 
@@ -606,6 +609,81 @@ body {
 .tab-panel.is-select {
   display: block;
 } */
+
+/* 새소식 */
+.news {
+  margin-top: 20px;
+  position: relative;
+}
+
+.news-link {
+  display: block;
+}
+
+.news-title {
+  color: #d16527;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.news-item {
+  margin-top: 35px;
+  padding-left: 130px;
+  position: relative;
+  min-height: 115px;
+}
+
+.news-item-title {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.news-item-brief {
+  line-height: 1.5;
+  margin-top: 10px;
+
+  /* 텍스트의 왼쪽 라인, 오른쪽 라인을 균일하게 맞춤. 많이 사용되는 패턴은 아님 */
+  text-align: justify;
+}
+
+.news::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 80%;
+  height: 1px;
+  background: #aaa linear-gradient(to right, #aaa, #fff);
+}
+
+.news-item-thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* border: 1px solid blue; */
+  text-align: center;
+}
+
+.news-item-thumbnail img {
+  /*          x y    blur spread  color   */
+  box-shadow: 0 15px 15px 5px #aaa;
+}
+
+.news-item-thumbnail figcaption {
+  /* 마진이 적용된다 = block요소다 */
+  margin-top: 15px;
+}
+
+.news-more {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
+
+.news-more::before {
+  color: green;
+}
 
 /* 슬로건 */
 .slogan {
