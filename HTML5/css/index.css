@@ -516,6 +516,7 @@ body {
   border: 0;
 }
 
+
 /* 공지사항 및 자료실 */
 .board {
   margin-top: 20px;
@@ -572,8 +573,6 @@ body {
 .board-more {
   display: none;
   position: absolute;
-
-  /* ??? */
   top: -8px;
   right: -8px;
   padding: 8px;
@@ -616,8 +615,14 @@ body {
   position: relative;
 }
 
-.news-link {
-  display: block;
+.news::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 80%;
+  height: 1px;
+  background: #aaa linear-gradient(to right, #aaa, #fff);
 }
 
 .news-title {
@@ -625,6 +630,10 @@ body {
   font-weight: 700;
   font-size: 1.5rem;
 }
+
+.news-link {
+  display: block;
+}  
 
 .news-item {
   margin-top: 35px;
@@ -644,16 +653,6 @@ body {
 
   /* 텍스트의 왼쪽 라인, 오른쪽 라인을 균일하게 맞춤. 많이 사용되는 패턴은 아님 */
   text-align: justify;
-}
-
-.news::before {
-  content: '';
-  position: absolute;
-  top: 30px;
-  left: 0;
-  width: 80%;
-  height: 1px;
-  background: #aaa linear-gradient(to right, #aaa, #fff);
 }
 
 .news-item-thumbnail {
@@ -681,8 +680,96 @@ body {
   padding: 8px;
 }
 
-.news-more::before {
-  color: green;
+
+/* 신규 이벤트  */
+.gradient-effect {
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px;
+  background: #ccc linear-gradient(to bottom, #ccc, #eee );
+}
+
+.accent-color {
+  color: #d16527;
+}
+
+.event {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  border-bottom: 1px solid #aaa;
+}
+
+.event-title {
+  background: pink;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* .event-button-wrapper {
+  margin-left: auto;
+  height: 18px;
+  overflow: hidden;
+  display: flex;
+  gap: 6px;
+}
+
+.event button {
+  width: 19px;
+  height: 0 !important;
+  border: 0;
+  padding: 18px 0 0 0;
+  background-color: transparent;
+  background-image: url(/HTML5/css/images/back_forward.png);
+  background-repeat: no-repeat;
+}
+
+.event button:focus {
+  outline-offset: -2px;
+}
+
+.event-button-next {
+  background-position: -36px 0;
+} */
+
+.event-button-container {
+  padding: 4px;
+  margin-left: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 6px;
+  transform: translate(4px, -4px);
+}
+
+.event-button-container button {
+  width: 19px;
+  height: 18px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  background-image: url(/HTML5/css/images/back_forward.png);
+  background-repeat: no-repeat;
+}
+
+.event-button-container .event-button-next {
+  background-position: -36px 0;
+}
+
+.event-detail {
+  width: 100%;
+}
+
+.event-thumbnail {
+  margin: 2px 0 10px;
+}
+
+.event-brief {
+  margin-top: 10px 0;
+}
+
+.event-thumbnail img {
+  border: 1px solid #aaa;
+  box-shadow: 5px 5px 0 0 #bbb;
 }
 
 /* 슬로건 */
