@@ -45,10 +45,36 @@ body {
     'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
     sans-serif;
   font-weight: 400;
-  background: #ccc;
+  background: url(/HTML5/css/images/bg_flower.png) no-repeat 50% 0,
+  #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 60%, #fff 100%);
   color: #181818;
   font-size: 1.4rem;
 }
+
+/* 스킵 내비게이션 */
+/* .skip-nav {
+}
+
+.skip-nav {
+  display: block;
+  text-align: center;
+  background: #000;
+  color: #fff;
+}
+
+.skip-nav span {
+  display: inline-block;
+  padding: 0px;
+  height: 0;
+  overflow: hidden;
+}
+
+.skip-nav:focus span {
+  height: auto;
+  padding: 8px;
+  box-shadow: 1px 1px 0 0 red, -1px -1px 0 0 red;
+
+} */
 
 /* 레이아웃 */
 .header,
@@ -701,7 +727,7 @@ body {
   padding-bottom: 10px;
 }
 
-.event-title, .related-title {
+.event-title, .related-title, .favorite-title {
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -799,16 +825,115 @@ body {
   padding: 0 0 0 20px;
 }
 
+
+/* 인기 사이트 */
+.favorite {
+  position: relative;
+  margin-top: 20px;
+}
+
+.favorite-list {
+  margin-top: 10px;
+  /* background: yellow; */
+  list-style-type: none;
+}
+
+.favorite-list li {
+  position: relative;
+  margin-top: 8px;
+  counter-increment: number;
+}
+
+.favorite-list li::before {
+  content: counter(number);
+  display: inline-flex;
+  padding: 2px 5px 1px;
+  font-size: 1.1rem;
+  color: #fff;
+  background: #aaa;
+  border-radius: 4px;
+  min-width: 1.5em;
+  justify-content: center;
+  margin-right: 0.5em;
+}
+
+.favorite-list a {
+  vertical-align: middle;
+}
+
+.favorite-list em {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 9px;
+  height: 11px;
+  margin-top: -5px;
+  background-image: url(/HTML5/css/images/rank.png);
+  background-repeat: no-repeat;
+}
+
+.favorite-list .stop {
+  background-position: 0 -50%;
+}
+
+.favorite-list .down {
+  background-position: 0 100%;
+} 
+
+.favorite-more {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  padding: 8px;
+}
+
 /* 슬로건 */
 .slogan {
-  background: lime;
-  clear: both;
+  position: relative;
+  padding: 10px 100px 10px 180px;
+}
+
+.slogan-title {
+  position: absolute;
+  left: 35px;
+  bottom: -25px;
+  width: 110px;
+  height: 83px;
+  line-height: 83px;
+  text-align: center;
+}
+
+.slogan-title::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(/HTML5/css/images/coffee.png);
+}
+
+.slogan-content {
+  color: #a09784;
+  line-height: 1.5;
+  /* font-size: 1.3rem; */
+}
+
+.slogan-content q::before {
+  display: inline-block;
+  font-size: 2.5rem;
+  transform: translateY(5px);
+}
+
+.slogan-content q::after {
+  content: "";
 }
 
 /* 푸터 */
 .footer {
-  background: purple;
+  background: #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 60%, #fff 100%);;
 }
 .footer-inner {
   background: coral;
+  height: 150px;
 }

@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
+    <a href="#userEmail" class="skip-nav">
+      <span>본문 바로가기</span>
+    </a>
     <header class="header">
       <h1 class="logo">
         <a href="/"><img src="./assets/logo.png" alt="Web Cafe" /></a>
@@ -389,9 +392,28 @@
             </ul>
           </section>
         </div>
+        <section class="favorite gradient-effect">
+          <h2 class="favorite-title">인기 <span class="accent-color">사이트</span></h2>
+          <ol class="favorite-list">
+            <li class="no1"><a href="/">W3C</a><em class="up" aria-label="상승"></em></li>
+            <li class="no2"><a href="/">Web Standards</a><em class="down" aria-label="하락"></em></li>
+            <li class="no3"><a href="/">CSS ZenGarden</a><em class="stop" aria-label="변동없음"></em></li>
+            <li class="no4"><a href="/">MDN</a><em class="up" aria-label="상승"></em></li>
+          </ol>
+          <a href="/" class="icon-plus more favorite-more" title="인기 사이트">더보기</a>
+        </section>
       </div>
     </main>
-    <article class="slogan">슬로건</article>
+    <article class="slogan">
+      <h2 class="slogan-title" title="웹카페에서 웹표준을">슬로건</h2>
+      <p class="slogan-content">
+        <q cite="http://w3.org/WAI">The power of the Web is in its universality, Access by everyone regardless of disability is an essential aspect.</q>
+        Tim Berners - Lee , W3C Director and inventor of the World Wide Web
+      </p>
+      <footer class="sr-only">
+        출처 : W3C, http://w3.org/WAI/
+      </footer>
+    </article>
     <footer class="footer">
       <div class="footer-inner">푸터</div>
     </footer>
