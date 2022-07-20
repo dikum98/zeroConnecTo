@@ -52,29 +52,28 @@ body {
 }
 
 /* 스킵 내비게이션 */
-/* .skip-nav {
-}
-
-.skip-nav {
-  display: block;
+.skip-nav{
+  position: absolute;
+  width: 100%;
   text-align: center;
+  padding: 4px 0;
+  transform: translateY(-110%);
   background: #000;
   color: #fff;
+  z-index: 10;
 }
 
 .skip-nav span {
   display: inline-block;
-  padding: 0px;
-  height: 0;
-  overflow: hidden;
+  padding: 8px;
+  border: 2px solid #00f;
+  border-radius: 4px;
 }
 
-.skip-nav:focus span {
-  height: auto;
-  padding: 8px;
-  box-shadow: 1px 1px 0 0 red, -1px -1px 0 0 red;
-
-} */
+.skip-nav:focus {
+  outline: 0;
+  transform: none;  
+}
 
 /* 레이아웃 */
 .header,
@@ -910,7 +909,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  background: url(/HTML5/css/images/coffee.png);
+  background: url(/HTML5/css/images/coffee.png) no-repeat;
 }
 
 .slogan-content {
@@ -929,11 +928,60 @@ body {
   content: "";
 }
 
+
 /* 푸터 */
 .footer {
   background: #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 60%, #fff 100%);;
 }
 .footer-inner {
-  background: coral;
-  height: 150px;
+  display: grid;
+  grid-template-columns: 140px 1fr 120px;
+  padding: 20px 0;
+}
+
+/* 푸터 로고 */
+.footer-logo {
+  grid-area: 1/1/4/2;
+  align-self: center;
+  justify-self: center;
+}
+
+/* 가이드 링크 */
+.guide-list {
+  grid-area: 1/2/2/3;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  background: #7b8385;
+  color: #fff;
+  border-radius: 20px;
+  padding: 4px 20px;
+  margin: 5px 20px;
+  /* 대문자로 입력한 것 처럼 바꾸기 */
+  text-transform: uppercase;
+
+  /* 대문자인데, 크기는 소문자일 때랑 비슷 */
+  /* font-variant: small-caps; */
+}
+
+.guide-list a {
+  display: block;
+  padding: 6px 10px;
+}
+
+/* 주소 */
+.address {
+  grid-area: 2/2/3/3;
+  margin: 5px 20px;
+}
+
+/* 저작권 */
+.copyright {
+  grid-area: 3/2/4/3;
+  margin: 5px 20px;
+}
+
+/* 배지 그룹 */
+.badge-container {
+  grid-area: 1/3/4/4;
 }

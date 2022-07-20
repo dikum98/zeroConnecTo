@@ -362,6 +362,8 @@
       </div>
       <div class="group group3">
         <div class="gradient-effect">
+
+          <!-- 신규 이벤트 -->
           <section class="event">
             <h2 class="event-title">신규 <span class="accent-color">이벤트</span></h2>
             <!-- <div class="event-button-wrapper">
@@ -372,8 +374,6 @@
               <button class="event-button-prev" aria-label="이전 이벤트 보기"></button>
               <button class="event-button-next" aria-label="다음 이벤트 보기"></button>
             </div>
-
-
             <div id="eventDetail" class="event-detail">
               <p class="event-thumbnail">
                 <img src="/HTML5/assets/free_gift.gif" alt="이벤트 경품 : 웹표준 핵심가이드북 2 증정" />
@@ -381,6 +381,8 @@
               <p class="event-brief"><em>웹표준 핵심 가이드북 2 출시!</em>선착순 500명 한정으로 증정.</p>
             </div>
           </section>
+
+          <!-- 관련 페이지 -->
           <section class="related">
             <h2 class="related-title">관련 <span class="accent-color">사이트</span></h2>
             <ul class="related-list" tabindex="0">
@@ -392,6 +394,8 @@
             </ul>
           </section>
         </div>
+
+        <!-- 인기 사이트 -->
         <section class="favorite gradient-effect">
           <h2 class="favorite-title">인기 <span class="accent-color">사이트</span></h2>
           <ol class="favorite-list">
@@ -404,6 +408,8 @@
         </section>
       </div>
     </main>
+
+    <!-- 슬로건 -->
     <article class="slogan">
       <h2 class="slogan-title" title="웹카페에서 웹표준을">슬로건</h2>
       <p class="slogan-content">
@@ -415,7 +421,33 @@
       </footer>
     </article>
     <footer class="footer">
-      <div class="footer-inner">푸터</div>
+      <div class="footer-inner">
+        <a href="#" class="footer-logo">
+          <img src="assets/footer_logo.png" alt="web cafe" />
+        </a>
+        <ul class="guide-list">
+          <li><a href="/">회사 소개</a></li>
+          <li><a href="/">개인정보 보호정책</a></li>
+          <li><a href="/">이메일주소 무단수집 거부</a></li>
+          <li><a href="/">contact us</a></li>
+          <li><a href="/">site map</a></li>
+        </ul>
+        <address class="address">
+          <!-- 여백 띄울 목적으로 span으로 그룹핑 -->
+          <span>서울시 강남구 역삼동 718-5</span>
+          <span>전화 : 02-3429-5114</span>
+          <!-- 아웃룩 같은 메일 앱이 자동 실행돼서 외국에선 많이 쓰는데 우리나라에서는 컴플레인 걸고 그러니까 잘 안씀 -->
+          <span>email : <a href="mailto:seulbinim@gmail.com?subject=문의사항">seulbinim@gmail.com</a></span>
+        </address>
+        <small class="copyright">
+          <!-- character entity 방식 -->
+          Copyright since &copy; 2010 by Web Cafe CORPORATION ALL RIGHTS RESERVED.
+        </small>
+        <div class="badge-container">
+          <img class="badge-html" src="assets/html5_logo.png" alt="최신 표준인 HTML5를 사용하여 마크업 했습니다." />
+          <img class="badge-css" src="assets/css3_logo.png" alt="최신 기술인 CSS3를 활용하여 디자인 했습니다." />
+        </div>
+      </div>
     </footer>
   </body>
 </html>
