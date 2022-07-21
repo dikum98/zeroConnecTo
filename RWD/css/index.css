@@ -20,18 +20,6 @@
   gap: var(--spacing-base);
 }
 
-/* 공통 멤버 서비스 */
-.memberOnly {
-  display: flex;
-  flex-flow: row nowrap; /* 기존 세로 리스트를 가로로 */
-  justify-content: flex-end; /* 오른쪽 끝으로 보내기 */
-}
-
-/* 공통 디바이더 */
-.divider {
-  margin: 0 var(--spacing-xs);
-}
-
 /* 공통 로고 */
 .logo {
   width: 12.75rem; /* 204px */
@@ -43,6 +31,18 @@
   width: 100%; /* 부모 크기 따라감 */
   height: 100%; /* 부모 크기 따라감 */
   background: url(/images/webcafe-logo.png) no-repeat 0 0/100%; /* 로고의 경우 디바이스 종류에 무관하게 동일한 사이즈를 제공하겠따. */
+}
+
+/* 공통 멤버 서비스 */
+.memberOnly {
+  display: flex;
+  flex-flow: row nowrap; /* 기존 세로 리스트를 가로로 */
+  justify-content: flex-end; /* 오른쪽 끝으로 보내기 */
+}
+
+/* 공통 디바이더 */
+.divider {
+  margin: 0 var(--spacing-xs);
 }
 
 /* 공통 검색 폼 */
@@ -75,7 +75,7 @@ input[type='search'] {
   border-radius: 0.25rem;
   padding: 0.125rem 0.75rem;
   white-space: nowrap; /* 혹시 줄 무너질까봐 */
-  font-size: var(--spacing-sm);
+  font-size: var(--text-sm);
 }
 
 .button-none {
@@ -118,10 +118,65 @@ input[type='search'] {
   }
 
   /* 모바일 메인메뉴 제어버튼 */
-  .button--burger {
+  .buttonWrapper {
+    padding: 0.25rem;
+    overflow: hidden;
     position: absolute;
     top: 3.75rem;
     right: var(--spacing-md);
+    transform: translate(0.25rem, -0.25rem);
+  }
+
+  .button--burger {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    background: none;
+    border: none;
+  }
+
+  .button--burger:focus {
+    outline-offset: 2px;
+  }
+
+  .button--burgerBarTop,
+  .button--burgerBarMiddle,
+  .button--burgerBarBottom {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    background: var(--white);
+    border-radius: 0.25rem;
+    left: 0;
+    transition: all 200ms;
+  }
+
+  .button--burgerBarTop {
+    top: 0;
+  }
+
+  .button--burgerBarMiddle {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .button--burgerBarBottom {
+    top: 100%;
+    transform: translateY(-100%);
+  }
+
+  .button--burger.is--active .button--burgerBarMiddle {
+    transform: translate(-150%, -50%);
+  }
+
+  .button--burger.is--active .button--burgerBarTop {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  .button--burger.is--active .button--burgerBarBottom {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
   }
 }
 
