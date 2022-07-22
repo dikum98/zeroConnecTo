@@ -265,6 +265,26 @@ input[type='search'] {
   margin-top: var(--spacing-xs);
 }
 
+/* 공통 트위터 */
+.twitter {
+  /* background: pink; */
+}
+
+.twitter__userName,
+.twitter__userId {
+  display: inline-block;
+}
+
+.twitter__userProfileImage {
+  border-radius: 100%;
+  float: right;
+  shape-outside: circle();
+}
+
+.twitter__summary {
+  margin-bottom: var(--spacing-xs);
+}
+
 /* ----------------------------------------------------------- */
 /* |                모바일 디바이스 (Mobile Device)                |*/
 /* ----------------------------------------------------------- */
