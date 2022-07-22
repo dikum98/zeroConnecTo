@@ -260,48 +260,10 @@ input[type='search'] {
   transform: translateX(var(--spacing-xs));
 }
 
-/* .board {
-  position: relative;
-}
-
-.board__list {
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 20px;
-}
-
-.board__item {
-  display: flex;
-  justify-content: space-between;
-}
-
-.board__link {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.board__date {
-  white-space: nowrap;
-}
-
-.board__more {
-  position: absolute;
-  top: 10px;
-  right: 0;
-  padding: 5px 0;
-} */
-
 /* 공통 인기 사이트 */
-/* .favorite {
-  margin-top: 20px;
+.favorite__item {
+  margin-top: var(--spacing-xs);
 }
-
-.favorite__list {
-  display: flex;
-  flex-flow: column wrap;
-  gap: 30px;
-} */
 
 /* ----------------------------------------------------------- */
 /* |                모바일 디바이스 (Mobile Device)                |*/
@@ -407,15 +369,12 @@ input[type='search'] {
   }
 
   /* 모바일 인기 사이트 */
-  /* .favorite__item {
-  }
-
   .favorite__link::after {
-    padding-left: var(--spacing-sm);
     content: attr(data-tooltip);
+    margin-left: var(--spacing-xs);
     color: var(--orange);
-    font-size: var(--text-md);
-  } */
+    font-size: var(--text-sm);
+  }
 }
 
 /* ------------------------------------------------------------- */
