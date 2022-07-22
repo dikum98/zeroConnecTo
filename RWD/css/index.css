@@ -229,6 +229,50 @@ input[type='search'] {
   height: 100%;
 }
 
+/* 공통 게시판 */
+.board {
+  position: relative;
+}
+
+.board__list {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
+
+.board__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.board__link {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.board__date {
+  white-space: nowrap;
+}
+
+.board__more {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  padding: 5px 0;
+}
+
+/* 공통 인기 사이트 */
+.favorite {
+  margin-top: 20px;
+}
+
+.favorite__list {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 30px;
+}
+
 /* ----------------------------------------------------------- */
 /* |                모바일 디바이스 (Mobile Device)                |*/
 /* ----------------------------------------------------------- */
@@ -331,6 +375,17 @@ input[type='search'] {
   .menu.is--active {
     transform: none;
   }
+
+  /* 모바일 인기 사이트 */
+  .favorite__item {
+  }
+
+  .favorite__link::after {
+    padding-left: var(--spacing-sm);
+    content: attr(data-tooltip);
+    color: var(--orange);
+    font-size: var(--text-md);
+  }
 }
 
 /* ------------------------------------------------------------- */
@@ -392,7 +447,6 @@ input[type='search'] {
     max-width: var(--container-width);
     margin-right: auto;
     margin-left: auto;
-    background: rgb(241, 225, 195);
   }
 }
 
