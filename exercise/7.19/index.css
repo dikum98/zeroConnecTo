@@ -486,7 +486,6 @@ body {
   border: 0;
 }
 
-
 /* 공지사항 및 자료실 */
 .board {
   margin-top: 20px;
@@ -666,7 +665,9 @@ body {
   padding-bottom: 10px;
 }
 
-.event-title, .related-title, .favorite-title {
+.event-title,
+.related-title,
+.favorite-title {
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -702,41 +703,53 @@ body {
 } */
 
 .event-button-container {
-  margin-left: auto;
-  background: yellow;
   padding: 4px;
+  margin-left: auto;
   display: flex;
   flex-flow: row nowrap;
   gap: 6px;
-  
+  transform: translate(4px, -4px);
+  margin-bottom: 10px;
 }
 
 .event-button-container button {
+  width: 19px;
+  height: 18px;
+  padding: 0;
+  border: 0;
   background-color: transparent;
   background-image: url(/HTML5/css/images/back_forward.png);
+  background-repeat: no-repeat;
+}
+
+.event-button-container .event-button-next {
+  background-position: -36px 0;
 }
 
 .event-detail {
-  padding-top: 10px;
-  text-align: center;
+  width: 100%;
+}
+
+.event-thumbnail {
+  margin: 2px 0 10px;
+}
+
+.event-brief {
+  margin: 10px 0;
 }
 
 .event-thumbnail img {
   box-shadow: 5px 5px 0 0 #bbb;
-  margin-bottom: 10px;
+  border: 1px solid #aaa;
 }
-
 
 /* 관련 페이지 */
 .related {
-  
-}
-
-.related-title {
-  padding: 10px 0;
+  padding-top: 10px;
 }
 
 .related-list {
+  margin-top: 10px;
   background: #fff;
   border: 1px solid #aaa;
   border-radius: 5px;
@@ -745,20 +758,95 @@ body {
   transition: height 400ms, padding 400ms 400ms;
 }
 
-.related-list:hover, .related-list:focus {
+.related-list:hover,
+.related-list:focus {
   height: 147px;
   padding: 10px 0;
 }
 
 .related-list a {
+  display: block;
   line-height: 25px;
   padding: 0 0 0 20px;
 }
 
+/* 인기 사이트 */
+.favorite {
+  position: relative;
+  margin-top: 20px;
+}
+
+.favorite-list {
+  margin-top: 10px;
+  list-style-type: none;
+}
+
+.favorite-list li {
+  position: relative;
+  margin-top: 8px;
+  counter-increment: number;
+}
+
+.favorite-list li::before {
+  content: counter(number);
+  display: inline-flex;
+  padding: 2px 5px 1px;
+  font-size: 1.1rem;
+  color: #fff;
+  background: #aaa;
+  border-radius: 4px;
+  min-width: 1.5em;
+  justify-content: center;
+  margin-right: 0.5em;
+}
+
+.favorite-more {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  padding: 8px;
+}
+
 /* 슬로건 */
 .slogan {
-  background: lime;
-  clear: both;
+  position: relative;
+  /* background: pink; */
+  padding: 10px 100px 10px 180px;
+}
+
+.slogan-title {
+  position: absolute;
+  left: 35px;
+  bottom: -25px;
+  width: 110px;
+  height: 83px;
+  line-height: 83px;
+  text-align: center;
+}
+
+.slogan-title::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(/HTML5/css/images/coffee.png) no-repeat;
+}
+
+.slogan-content {
+  color: #a09784;
+  line-height: 1.5;
+}
+
+.slogan-content q::before {
+  display: inline-block;
+  font-size: 2.5rem;
+  transform: translateY(5px);
+}
+
+.slogan-content q::after {
+  content: '';
 }
 
 /* 푸터 */

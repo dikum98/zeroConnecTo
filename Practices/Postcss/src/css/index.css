@@ -1,0 +1,52 @@
+/* 원래 url함수 써야되는데 postcss-import 덕에 이렇게 사용가능? */
+@import './reset.css';
+:root {
+  --mainColor: #12345678;
+}
+
+body {
+  color: var(--mainColor);
+  font-family: system-ui;
+}
+
+a {
+  color: rgb(0 0 100% / 90%);
+
+  &:hover {
+    color: rebeccapurple;
+  }
+
+  & span {
+    font-weight: bold;
+  }
+}
+
+:is(input, button):is(:hover, :focus) {
+  color: oklch(40% 0.268735435 34.568626);
+}
+body {
+  font-size: 24px;
+  background: yellow;
+  line-height: 1.5;
+  color: #000;
+}
+
+@media (min-width: 1024px) {
+  body {
+    background: yellow;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    color: blue;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 36px;
+  }
+}
+
+/* 이런걸 한줄로 낭독하게 한다 -> 어글리파이 or 미니파이 -> 코드를 압축시킴 */
