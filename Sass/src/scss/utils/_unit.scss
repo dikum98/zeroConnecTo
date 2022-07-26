@@ -1,1 +1,17 @@
-// util.scss
+@use 'sass:math';
+
+$rootUnit: 16px !default;
+
+@function removeUnit($value) {
+  @return math.div($value, $value * 0 + 1); // 나누기 기능
+}
+
+// rem 환산 함수
+@function rem($value, $base: $rootUnit) {
+  @return (removeUnit(math.div($value, $base))) * 1rem;
+}
+
+// em 환산 함수
+@function em($value, $base: $rootUnit) {
+  @return (removeUnit(math.div($value, $base))) * 1em;
+}

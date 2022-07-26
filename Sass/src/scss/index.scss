@@ -1,1 +1,6 @@
-// index.scss
+@use './base';
+@use './utils' as *;
+
+.appFooter {
+  @include boxSizeMinMax;
+}
