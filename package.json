@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "brew": "^0.0.8",
     "htmlhint": "^1.1.4"
   }
 }
