@@ -1,6 +1,3 @@
 @use './base';
-@use './utils' as *;
-
-.appFooter {
-  @include boxSizeMinMax;
-}
+@use './layout';
+@use './pages';
