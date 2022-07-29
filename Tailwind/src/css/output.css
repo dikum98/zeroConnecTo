@@ -649,8 +649,16 @@ video {
   align-items: flex-start;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-center {
@@ -698,6 +706,21 @@ video {
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(237 35 75 / var(--tw-bg-opacity));
+}
+
+.bg-yellow-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 240 138 / var(--tw-bg-opacity));
+}
+
+.bg-violet-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(221 214 254 / var(--tw-bg-opacity));
+}
+
+.bg-orange-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 186 116 / var(--tw-bg-opacity));
 }
 
 .bg-checkbox-default {
@@ -768,6 +791,21 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-pink-500 {
+  --tw-text-opacity: 1;
+  color: rgb(236 72 153 / var(--tw-text-opacity));
+}
+
+.text-rose-200 {
+  --tw-text-opacity: 1;
+  color: rgb(254 205 211 / var(--tw-text-opacity));
+}
+
+.text-fuchsia-300 {
+  --tw-text-opacity: 1;
+  color: rgb(240 171 252 / var(--tw-text-opacity));
+}
+
 .underline {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -804,6 +842,11 @@ body {
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
+.dark .dark\:bg-gray-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+}
+
 .dark .dark\:text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -812,6 +855,11 @@ body {
 .dark .dark\:text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.dark .dark\:text-blue-500 {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
 .dark .dark\:focus\:border-primary:focus {
@@ -832,6 +880,18 @@ body {
     border-radius: 1rem;
   }
 
+  .md\:rounded-3xl {
+    border-radius: 1.5rem;
+  }
+
+  .md\:rounded-full {
+    border-radius: 9999px;
+  }
+
+  .md\:rounded-xl {
+    border-radius: 0.75rem;
+  }
+
   .md\:border {
     border-width: 1px;
   }
@@ -839,6 +899,11 @@ body {
   .md\:border-gray5 {
     --tw-border-opacity: 1;
     border-color: rgb(224 224 224 / var(--tw-border-opacity));
+  }
+
+  .md\:border-green-300 {
+    --tw-border-opacity: 1;
+    border-color: rgb(134 239 172 / var(--tw-border-opacity));
   }
 
   .md\:py-16 {

@@ -12,18 +12,12 @@
 
   function init() {
     if (isOSDarkMode) {
-      toggleThemeButton.hidden = true;
+      // toggleThemeButton.hidden = true;
       htmlNode.classList.add('dark');
     }
 
     window.matchMedia(darkScheme).addEventListener('change', function (e) {
-      logoPic.insertAdjacentHTML(
-        'afterbegin',
-        [
-          '<source srcset="./images/fastcampus-logo-dark.png" media="(prefers-color-scheme: dark)" />',
-          '<source srcset="./images/fastcampus-logo.png" media="(prefers-color-scheme: light)" />',
-        ].join('')
-      );
+      logoPic.insertAdjacentHTML('afterbegin', ['<source srcset="./images/fastcampus-logo-dark.png" media="(prefers-color-scheme: dark)" />', '<source srcset="./images/fastcampus-logo.png" media="(prefers-color-scheme: light)" />'].join(''));
       const theme = e.matches ? 'dark' : 'light';
       if (theme === 'dark') {
         toggleThemeButton.hidden = true;
