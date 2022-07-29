@@ -1,4 +1,7 @@
-@use "./utils" as *;
+@use './utils' as *;
+@use './component/button';
+@use './component/card';
+@import '@euid/scss-mixins';
 
 .box {
   width: $w;

@@ -382,6 +382,26 @@ legend {
   color: #6aaee6;
 }
 
+.accentbook {
+  color: "$accent-book";
+}
+
+.accentnews {
+  color: "$accent-news";
+}
+
+.accentboard {
+  color: "$accent-board";
+}
+
+.accentfavorite {
+  color: "$accent-favorite";
+}
+
+.accenttwitter {
+  color: "$accent-twitter";
+}
+
 .sprite {
   min-height: 3.75rem;
   background-image: url("./../assets/images/sprite_main.png");
@@ -520,6 +540,200 @@ legend {
 }
 .searchForm .button--primary {
   margin-left: 1rem;
+}
+
+@media (max-width: 767px) {
+  .menu {
+    display: none;
+    background: #eea60a;
+  }
+  .menu .menu__item {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    border-bottom: 0.0625rem solid #767676;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .menu.is--active {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .menu {
+    background: #988574;
+  }
+  .menu .menu__list {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: nowrap;
+  }
+  .menu .menu__item {
+    color: #fff;
+    text-shadow: 1px 1px 0px #000;
+  }
+}
+
+.appFooter {
+  background: #38302e;
+  color: #fff;
+  padding: 1.5rem;
+}
+
+.address {
+  margin-bottom: 1rem;
+}
+@media (max-width: 767px) {
+  .address {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
+  }
+}
+@media (min-width: 768px) {
+  .address {
+    text-align: center;
+  }
+}
+
+[class*=__title] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  font-size: 1.125rem;
+}
+
+[class*=__summary] {
+  font-size: 0.875rem;
+  letter-spacing: -0.02em;
+  line-height: 1.5;
+}
+
+.home {
+  padding: 1rem 1.5rem;
+}
+.home [clas*=__title] {
+  margin-bottom: 1rem;
+}
+@media (max-width: 767px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .home {
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: 1.25rem;
+    grid-template-areas: "news news news news news news news news news news news news" "book book book book twitter twitter twitter twitter twitter favorite favorite favorite" "book book book book . board board board board board board board";
+  }
+  .home .book {
+    grid-area: book;
+  }
+  .home .news {
+    grid-area: news;
+  }
+  .home .board {
+    grid-area: board;
+  }
+  .home .favorite {
+    grid-area: favorite;
+  }
+  .home .twitter {
+    grid-area: twitter;
+  }
+}
+
+.home > section, .home > article {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+
+.book__cover {
+  text-align: center;
+}
+.book__coverCaption {
+  margin-top: 1rem;
+}
+.book__info {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.book__info dt:first-child {
+  margin-right: 0.5rem;
+}
+.book .ratingStar {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.board {
+  position: relative;
+}
+.favorite__link::after {
+  content: attr(data-tooltip);
+  color: #eea60a;
+  font-size: 0.75rem;
+}
+
+.twitter__userProfile {
+  float: right;
+  width: 20%;
+  max-width: 110px;
+  height: 110px;
+}
+.twitter__userProfileImage {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 30% 40%;
+}
+
+.iframeWrapper {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+  padding-top: 56.25%;
+}
+.iframeWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -810,8 +810,8 @@ body {
 /* 슬로건 */
 .slogan {
   position: relative;
-  /* background: pink; */
-  padding: 10px 100px 10px 180px;
+  padding: 10px 110px 10px 190px;
+  background-color: white;
 }
 
 .slogan-title {
@@ -825,8 +825,8 @@ body {
 }
 
 .slogan-title::after {
-  position: absolute;
   content: '';
+  position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
@@ -835,13 +835,13 @@ body {
 }
 
 .slogan-content {
-  color: #a09784;
   line-height: 1.5;
+  color: #a09784;
 }
 
 .slogan-content q::before {
-  display: inline-block;
-  font-size: 2.5rem;
+  font-size: 20px;
+  font-weight: 700;
   transform: translateY(5px);
 }
 
@@ -851,8 +851,49 @@ body {
 
 /* 푸터 */
 .footer {
-  background: purple;
+  background: #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 60%, #fff 100%);
 }
+
 .footer-inner {
-  background: coral;
+  display: grid;
+  grid-template-columns: 140px 1fr 120px;
+  padding: 20px 0;
+}
+
+.footer-logo {
+  grid-area: 1/1/4/2;
+  align-self: center;
+  justify-self: center;
+}
+
+.guide-list {
+  grid-area: 1/2/2/3;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  background: #7b8385;
+  color: #fff;
+  border-radius: 20px;
+  padding: 4px 20px;
+  margin: 5px 20px;
+  text-transform: uppercase;
+}
+
+.guide-list a {
+  display: block;
+  padding: 6px 10px;
+}
+
+.address {
+  grid-area: 2/2/3/3;
+  padding: 5px 20px;
+}
+
+.copyright {
+  grid-area: 3/2/4/3;
+  padding: 5px 20px;
+}
+
+.badge-container {
+  grid-area: 1/3/4/4;
 }

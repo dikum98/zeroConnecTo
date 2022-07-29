@@ -1,1 +1,114 @@
-// home.scss
+@use './../utils/' as *;
+
+[class*='__title'] {
+  @include flexbox(column, center);
+  @include textHeading(18px);
+}
+
+[class*='__summary'] {
+  @include textStyle(14px);
+}
+
+.home {
+  padding: rem(16px) rem(24px);
+
+  [clas*='__title'] {
+    margin-bottom: rem(16px);
+  }
+
+  @include mobile {
+    @include flexbox(column);
+    gap: rem(16px);
+  }
+
+  @include desktop {
+    @include boxSizeMinMax;
+    @include gridBox;
+    grid-template-areas:
+      'news news news news news news news news news news news news'
+      'book book book book twitter twitter twitter twitter twitter favorite favorite favorite'
+      'book book book book . board board board board board board board';
+    .book {
+      grid-area: book;
+    }
+    .news {
+      grid-area: news;
+    }
+    .board {
+      grid-area: board;
+    }
+    .favorite {
+      grid-area: favorite;
+    }
+    .twitter {
+      grid-area: twitter;
+    }
+  }
+}
+
+.home > section, .home > article {
+  @include flexbox(column);
+  gap: rem(16px);
+}
+
+.book {
+  &__cover {
+    text-align: center;
+  }
+
+  &__coverCaption {
+    margin-top: rem(16px);
+  }
+
+  &__info {
+    @include marginY(16px);
+    dt:first-child {
+      margin-right: rem(8px);
+    }
+    @include flexbox($j: center, $w: wrap);
+  }
+
+  .ratingStar {
+    width: 100%;
+    text-align: center;
+    font-size: rem(32px);
+  }
+}
+
+.news {
+}
+
+.board {
+  position: relative;
+  &__more {
+
+  }
+}
+
+.favorite {
+  &__link::after {
+    content: attr(data-tooltip);
+    color: $accent-favorite;
+    font-size: rem(12px);
+  }
+}
+
+.twitter {
+  &__userProfile {
+    float: right;
+    width: 20%;
+    max-width: 110px;
+    height: 110px;
+  }
+  &__userProfileImage {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 30% 40%;
+  }
+}
+
+.iframeWrapper {
+  @include responsIframe;
+}

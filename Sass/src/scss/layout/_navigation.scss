@@ -1,1 +1,40 @@
-// navigation.scss
+@use './../utils/' as *;
+
+// 메뉴 네비게이션
+.menu {
+  .menu__item {
+    
+  }
+
+  @include mobile {
+    display: none;
+    background: $orange;
+
+    .menu__item {
+      @include paddingX(10px);
+      @include paddingY(10px);
+      border-bottom: rem(1px) solid $silver;
+      font-size: rem(16px);
+      font-weight: 700;
+    }
+
+    &.is--active {
+      display: block;
+    }
+  }
+
+  @include desktop {
+    background: $secondary-color;
+
+    .menu__list {
+      width: 70%;
+      @include autoMargin;
+      @include flexbox(row, space-between);
+    }
+
+    .menu__item {
+      color: $white;
+      text-shadow: 1px 1px 0px $black;
+    }
+  }
+}
